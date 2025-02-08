@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <FrameLayout
         android:id="@+id/banner"
@@ -26,12 +26,12 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/tv_login"
+        android:id="@+id/tvt_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="LOGIN"
+        android:text="REGISTER"
         android:textColor="@color/black"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@id/banner" />
 
     <EditText
-        android:id="@+id/edt_username_login"
+        android:id="@+id/edt_username_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -51,10 +51,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_login" />
+        app:layout_constraintTop_toBottomOf="@id/tvt_register" />
 
     <EditText
-        android:id="@+id/edt_password_login"
+        android:id="@+id/edt_password_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -66,10 +66,39 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_username_login" />
+        app:layout_constraintTop_toBottomOf="@id/edt_username_register" />
+
+    <EditText
+        android:id="@+id/edt_confirm_password_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/range"
+        android:hint="Xác nhận mật khẩu"
+        android:paddingStart="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_password_register" />
+
+    <EditText
+        android:id="@+id/edt_mail_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/range"
+        android:hint="Email"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_confirm_password_register" />
 
     <ProgressBar
-        android:id="@+id/progress_login"
+        android:id="@+id/progress_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -81,57 +110,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingStart="10dp"
-        android:text="Quên mật khẩu?"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_password_login" />
-
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/black"
-        android:text="LOGIN"
+        android:text="REGISTER"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
+        app:layout_constraintTop_toBottomOf="@id/edt_mail_register" />
 
     <TextView
-        android:id="@+id/tv_you_do_not_have_an_account"
+        android:id="@+id/tv_already_have_an_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Bạn chưa có tài khoản?"
+        android:text="Bạn đã có tài khoản?"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@id/btn_Register" />
 
     <TextView
-        android:id="@+id/tv_register"
+        android:id="@+id/tv_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="10dp"
-        android:text="Đăng ký"
+        android:text="Đăng nhập"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/tv_you_do_not_have_an_account"
-        app:layout_constraintStart_toEndOf="@id/tv_you_do_not_have_an_account"
-        app:layout_constraintTop_toTopOf="@id/tv_you_do_not_have_an_account" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_already_have_an_account"
+        app:layout_constraintStart_toEndOf="@id/tv_already_have_an_account"
+        app:layout_constraintTop_toTopOf="@id/tv_already_have_an_account" />
 
     <ImageView
         android:id="@+id/footer"
