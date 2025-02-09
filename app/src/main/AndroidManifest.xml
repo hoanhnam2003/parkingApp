@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppParking"
         tools:targetApi="31">
         <activity
+            android:name=".ShowdetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowdetailsActivity">
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu"
+        app:layout_constraintTop_toTopOf="@id/frame1"
+        app:layout_constraintBottom_toBottomOf="@id/frame1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="20dp"
+        />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/frame1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/txtDanhSachBienSo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Danh sách biển số"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/videoView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtDanhSachBienSo"
+        android:layout_marginTop="10dp"
+        >
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:verticalSpacing="4dp"
+            android:horizontalSpacing="4dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtThongTinChiTiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin chi tiết"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollViewThongTinChiTiet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtThongTinChiTiet"
+        android:layout_marginTop="10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="@color/black">
+
+            <!-- Dòng Tiêu Đề -->
+            <TableRow android:background="@drawable/border">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="STT"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/border"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Vị trí"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/border"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Biển số"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/border"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Thời gian vào"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/border"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Thời gian ra"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/border"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <TableRow android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/txt_STT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="1"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txt_Vitri"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="1"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvBienSo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="37K - 005.14"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/tvthoigianvao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="4:56AM 19/01/25"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@drawable/border"/>
+                <TextView
+                    android:id="@+id/tvthoigianra"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="5:56AM 19/01/25"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@drawable/border"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
